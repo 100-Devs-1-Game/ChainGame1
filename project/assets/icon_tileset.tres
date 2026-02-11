@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://d1yjljwok3eyx"]
+[gd_resource type="TileSet" format=3 uid="uid://d1yjljwok3eyx"]
 
 [ext_resource type="Texture2D" uid="uid://cv71jixf2mpih" path="res://icon.svg" id="1_q0yij"]
 [ext_resource type="Texture2D" uid="uid://chc1vmf5517ri" path="res://assets/tiles/sidewalk_and_walls.png" id="1_qnow3"]
