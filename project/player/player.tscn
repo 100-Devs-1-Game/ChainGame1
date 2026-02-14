@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdj435168dtce"]
+[gd_scene format=3 uid="uid://bdj435168dtce"]
 
 [ext_resource type="Script" uid="uid://dbt0p3tw4mi8p" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="Texture2D" uid="uid://hyj361xs6awg" path="res://assets/sprites/walker_white.png" id="2_g1dw6"]
@@ -15,23 +15,23 @@ point_count = 3
 offsets = PackedFloat32Array(0.46575344, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=706753036 groups=["player"]]
 script = ExtResource("1_rkbax")
 
-[node name="Orientation" type="Node2D" parent="."]
+[node name="Orientation" type="Node2D" parent="." unique_id=2083571343]
 position = Vector2(0, -28)
 
-[node name="CharacterSprite" type="Sprite2D" parent="Orientation"]
+[node name="CharacterSprite" type="Sprite2D" parent="Orientation" unique_id=100901993]
 modulate = Color(0, 0.92941177, 0, 1)
 position = Vector2(0, 1.66893e-05)
 texture = ExtResource("2_g1dw6")
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1623770400]
 position = Vector2(0, -28)
 shape = SubResource("CapsuleShape2D_tbgi4")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=440508490]
 position = Vector2(0, -116)
 zoom = Vector2(1.565, 1.565)
 limit_enabled = false
@@ -41,11 +41,11 @@ limit_right = 1152
 limit_bottom = 648
 position_smoothing_enabled = true
 
-[node name="LandingParticles" type="CPUParticles2D" parent="."]
+[node name="LandingParticles" type="CPUParticles2D" parent="." unique_id=876901424]
 position = Vector2(0, 3)
 emitting = false
 amount = 16
-lifetime = 0.09999999999999999
+lifetime = 0.1
 one_shot = true
 explosiveness = 0.8
 local_coords = true
