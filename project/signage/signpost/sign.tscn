@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bjxgpd6r4lj8f"]
+
+[ext_resource type="Script" uid="uid://byhh4qeou5sai" path="res://signage/signpost/sign.gd" id="1_kd50q"]
+[ext_resource type="Texture2D" uid="uid://do3s2ninx3a1d" path="res://assets/sprites/sign.png" id="2_8yyji"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tbgi4"]
+radius = 24.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6xl0"]
+bg_color = Color(0.11372549, 0.11372549, 0.11372549, 0.62352943)
+
+[node name="Sign" type="Area2D" unique_id=138115228]
+collision_layer = 0
+script = ExtResource("1_kd50q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1136646888]
+shape = SubResource("CircleShape2D_tbgi4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=916155638]
+texture = ExtResource("2_8yyji")
+
+[node name="Label" type="RichTextLabel" parent="." unique_id=1635896467]
+unique_name_in_owner = true
+offset_left = -120.0
+offset_top = -136.0
+offset_right = 128.0
+offset_bottom = -40.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_o6xl0")
+bbcode_enabled = true
+text = "[rainbow]EXAMPLE TEXT![/rainbow]
+
+[shake]ENABLE EDITABLE CHILDREN IN INSTANTIATED SCENES![/shake]"
+scroll_active = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
